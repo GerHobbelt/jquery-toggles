@@ -1,5 +1,5 @@
 /**
-@license jQuery Toggles v2.0.5
+@license jQuery Toggles v2.0.5.1
 Copyright 2013 Simon Tabor - MIT License
 https://github.com/simontabor/jquery-toggles / http://simontabor.com/labs/toggles
 */
@@ -83,7 +83,7 @@ $.fn['toggles'] = function(options) {
     var width = toggle.width();
 
     // if the element doesnt have an explicit height/width in css, set them
-    if (!height || !width) {
+    if (height <= 0 || width <= 0) {
       toggle.height(height = opts.height);
       toggle.width(width = opts.width);
     }
